@@ -17,6 +17,15 @@ package fi.viikko2.task04;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Tehtävä 4: implementoi Rectangle ja Circle ennen ajoa.");
+        Shape s = new Shape("muoto");
+        System.out.println(s.toString());
+
+        Circle c = new Circle(2.8, "circle");
+        System.out.println(c.area());
+        System.out.println(c.toString());
+
+        Rectangle r = new Rectangle(7, 3, "rectangle");
+        System.out.println(r.area());
+        System.out.println(r.toString());
     }
 }

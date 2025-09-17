@@ -17,4 +17,18 @@ package fi.viikko2.task04;
 
 public class Shape {
 
+    public String shape;
+
+    public Shape(String shape){
+        this.shape = shape;
+    }
+
+    public double area(){
+        return 0.0;
+    }
+
+    public String toString(){
+        return shape;
+    }
+
 }

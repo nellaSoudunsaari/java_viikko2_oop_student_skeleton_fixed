@@ -17,6 +17,14 @@ package fi.viikko2.task05;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Tehtävä 5: implementoi SalariedEmployee ja HourlyEmployee ennen ajoa.");
+        Employee a = new Employee("Aku Ankka");
+        System.out.println(a.toString());
+
+        SalariedEmployee b = new SalariedEmployee("Hannu Ankka", 2500.55);
+        System.out.println(b.toString());
+
+        HourlyEmployee c = new HourlyEmployee("Tupu Ankka", 13.75, 45);
+        System.out.println(c.toString());
+        System.out.println(c.monthlyPay());
     }
 }

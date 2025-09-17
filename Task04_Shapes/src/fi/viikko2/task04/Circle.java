@@ -17,21 +17,29 @@
 package fi.viikko2.task04;
 
 public class Circle extends Shape {
-    // TODO: private double radius;
-    // TODO: public Circle(double radius) { ... }
+    private double radius;
+    
+    public Circle(double radius, String shape) {
+        super(shape);
+        this.radius = radius;
+    }
 
     @Override
     public double area(){ 
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement area()"); }
+        return Math.PI * radius * radius;
+    }
 
     @Override
     public String toString(){ 
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement toString()"); }
+        return shape; 
+    }
 
     @Override
     public boolean equals(Object o){ 
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement equals(Object)"); }
+        if(this == o) return true;
+        if(!(o instanceof Circle)) return false;
+
+        Circle other = (Circle)o;
+        return this.radius == other.radius && java.util.Objects.equals(this.shape, other.shape);
+    }
 }
